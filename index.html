@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Page Extractor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Document Page Extractor</h1>
+        <form id="uploadForm" method="POST" enctype="multipart/form-data" action="/extract">
+            <input type="file" name="docFile" accept=".docx, .pdf">
+            <input type="file" name="excelFile" accept=".xlsx">
+            <input type="text" name="outputDir" placeholder="Output Directory">
+            <button type="submit">Extract Pages</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
